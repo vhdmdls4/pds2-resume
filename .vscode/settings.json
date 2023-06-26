@@ -45,5 +45,7 @@
     "streambuf": "cpp",
     "typeinfo": "cpp"
   },
+  "editor.wordWrap": "on",
   "terminal.integrated.defaultProfile.windows": "Command Prompt (Admin)",
+  "C_Cpp.errorSquiggles": "enabled",
 }
