@@ -214,14 +214,31 @@ int main()
   std::string sub_teste = str.substr(7, 0);
 
   std::cout << sub << endl;
+
   std::cout << sub_teste << endl;
 
-  // Encontrar uma substring
+  // Encontrar uma substring; fora que size_t representa o maior tamanho possível que a variável pode ter, geralmente você verá ela associada a métodos de string;
   size_t pos = str.find("welcome");
   if (pos != std::string::npos)
   {
     std::cout << "Substring encontrada na posição: " << pos << std::endl;
   }
+
+  std::string sentence = "O rato roeu a roupa do rei de Roma.";
+
+  // Procura a palavra "rei" na string
+  size_t pos = sentence.find("rei");
+
+  if (pos != std::string::npos)
+  {
+    std::cout << "Palavra encontrada na posição: " << pos << std::endl;
+  }
+  else
+  {
+    std::cout << "Palavra não encontrada." << std::endl;
+  }
+
+  // npos = std::string::npos é um valor estático da classe std::string em C++. Ele é usado para representar uma posição inválida ou inexistente em uma string. O valor de std::string::npos é geralmente definido como -1 ou um valor máximo especial que indica a ausência de uma posição válida. std::string::npos é comumente usado em operações de pesquisa em strings, como find() ou rfind(), para indicar que o caractere ou a substring procurada não foi encontrada na string. Quando uma função de pesquisa não encontra o caractere ou a substring especificada, ela retorna std::string::npos como resultado para indicar a ausência do item procurado. A vantagem de usar std::string::npos é que ele evita a necessidade de um valor mágico arbitrário para representar a ausência de uma posição válida. Em vez disso, você pode comparar o resultado de uma função de pesquisa com std::string::npos para determinar se a busca foi bem-sucedida ou não.
 
   // Imprimir a string
   std::cout << str << std::endl;
