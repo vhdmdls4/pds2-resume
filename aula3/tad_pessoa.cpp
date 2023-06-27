@@ -4,36 +4,42 @@ using namespace std;
 
 struct pessoa
 {
-  float peso;
-  string nacionalidade;
-  float altura;
+  float p;
+  string n;
+  float h;
 
   pessoa(float p, std::string n, float h)
   {
-    peso = p;
-    nacionalidade = n;
-    altura = h;
+    this->p = p;
+    this->n = n;
+    this->h = h;
   }
 
   void get_peso()
   {
-    std::out << pessoa.peso << std::endl;
+    std::cout << this->p << std::endl;
   }
 
   void get_gentilico()
   {
-    std::out << pessoa.nacionalidade << std::endl;
+    std::cout << this->n << std::endl;
   }
 
   void get_altura()
   {
-    std::out << pessoa.altura;
-    << std::endl;
+    std::cout << this->h << std::endl;
   }
 };
 
 int main()
 {
+  pessoa p1(45, "altamirense", 1.89);
+
+  p1.get_peso();
+
+  p1.get_altura();
+
+  p1.get_gentilico();
 
   return 0;
 }
