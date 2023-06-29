@@ -38,3 +38,4 @@ Código-fonte => Código de máquina => Execução pelo processador
 - O uso de ponteiros em C++ está relacionado à gestão da memória e permite o acesso indireto a variáveis, bem como a alocação de memória dinâmica no heap. Os ponteiros podem ser usados para manipular variáveis em qualquer região de memória (heap, stack ou globais) e são especialmente úteis para trabalhar com estruturas de dados complexas, como listas encadeadas, árvores e objetos alocados dinamicamente.
 
 - Em resumo, o compilador lida com um programa dividindo-o em diferentes regiões de memória, como heap, stack, código e variáveis globais. As variáveis são alocadas em regiões específicas, dependendo de seu escopo e tempo de vida. O uso de ponteiros em C++ permite acessar e manipular variáveis em diferentes regiões de memória, facilitando a gestão dinâmica da memória e o trabalho com estruturas de dados complexas.
+

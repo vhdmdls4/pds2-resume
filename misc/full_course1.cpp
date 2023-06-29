@@ -180,6 +180,11 @@ int main()
     double doubleNum = static_cast<double>(num);
 
 
+  -- Conversão de tipo com c-style cast:
+    * float f = 3.14;
+      int i = (int*) f;
+      aqui o float é convertido em int com o (int*);
+
   */
 
   // std::string

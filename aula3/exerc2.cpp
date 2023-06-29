@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstddef>
+#include <vector>
 
 using namespace std;
 
@@ -25,7 +26,7 @@ bool compare_val(int *num1, int *num2)
 char *cast_TO_char(int *n)
 {
   // char *c = (char*) n; // c-cast style or:
-  char *c = reinterpret_cast<char *>(*n);
+  char *c = reinterpret_cast<char *>(n);
   return c;
 }
 
@@ -34,6 +35,11 @@ char *cast_TO_char(int *n)
 // A funcao deve adicionar uma quebra de linha '\n' apos exibir a cadeia de caracteres.
 void print_char(char *n)
 {
+  for (int i = 0; n[i] != '\0'; i++)
+  {
+    cout << n[i];
+  }
+  cout << endl;
 }
 
 // 6) A funcao deve imprimir uma string.
@@ -41,17 +47,31 @@ void print_char(char *n)
 // A funcao deve adicionar uma quebra de linha '\n' apos exibir a string.
 void print_string(string &str)
 {
+  cout << str << endl;
 }
 
 // 7) A funcao deve concatenar uma string (end) ao final de outra (begin)
+
+// void concatenar_string(string &begin, string end)
+// {
+//   begin.append(end);
+// }
+
 void concatenar_string(string &begin, string end)
 {
+  begin = begin + end;
 }
 
 // 8) A funcao deve uma alocar um array com 10 posicoes e
 // inicializa-las com o identificador da sua posição
+
 void aloca_array(int **arr)
 {
+  *arr = new int[10];
+  for (int i = 0; i < 10; i++)
+  {
+    arr[0][i] = i;
+  }
 }
 
 // 9) A funcao deve exibir os valores armazenados em um array
@@ -59,17 +79,25 @@ void aloca_array(int **arr)
 // Adicione uma quebra de linha após exibir os valores
 void exibe_array(int *arr)
 {
+  for (int i = 0; i < 10; i++)
+  {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
 }
 
 // 10) A funcao deve adicionar o offset (pos) ao endereco (arr),
 // e retornar um ponteiro para a nova posicao
 int *retorna_addr_array_pos(int *arr, int pos)
 {
+  arr += pos;
+  return arr;
 }
 
 // 11) A funcao deve liberar a memória utilizada pelo array
 void libera_array(int *arr)
 {
+  free(arr);
 }
 
 int main()
